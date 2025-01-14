@@ -1,0 +1,66 @@
+@use "./layout/variables" as *;
+
+.btn {
+  color: $white;
+  background: linear-gradient(135deg, rgba(48, 67, 169, 1) 0%, rgba(31, 98, 159, 1) 100%);
+  border: 1px solid transparent;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 28px;
+  padding: 13px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  min-width: 157px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  &:hover {
+    background: linear-gradient(135deg, rgba(31, 98, 159, 1) 0%, rgba(48, 67, 169, 1) 100%);
+  }
+  &_outline {
+    border: 1px solid $white;
+    background: transparent;
+    font-weight: 300;
+    &:hover {
+      background: $white;
+      color: $dark-blue;
+    }
+  }
+}
+
+.link {
+  color: $blue;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.428;
+  &:hover {
+    &:after {
+      transform: translateX(10px);
+    }
+  }
+  &:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e905";
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: text-bottom;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,96 @@
+@use "./layout/variables" as *;
+
+.two-columns {
+  padding: 50px 0;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  @media (min-width: $laptop) {
+    padding: 100px 0;
+    gap: 60px;
+  }
+  &__col-images,
+  &__col-text {
+    @media (min-width: $tablet) {
+      flex: 1 1 calc(50% - 15px);
+    }
+    @media (min-width: $laptop) {
+      flex: 1 1 calc(50% - 15px);
+    }
+  }
+  &__col-images {
+    margin-bottom: 40px;
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__col-text {
+  }
+}
+
+.images-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__image {
+    width: 80%;
+    margin-right: auto;
+    + .images-list__image {
+      margin-top: -30px;
+      @media (min-width: $laptop) {
+        margin-top: -65px;
+      }
+    }
+    &_right {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  &__label {
+    background: $dark-blue;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    max-width: 150px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    @media (min-width: $laptop) {
+      padding: 15px;
+      font-size: 18px;
+      max-width: 200px;
+    }
+    &_right {
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: 0;
+    }
+    img {
+      display: block;
+      width: 20px;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      margin-right: 10px;
+      @media (min-width: $laptop) {
+        width: 30px;
+      }
+    }
+  }
+}

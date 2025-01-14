@@ -1,0 +1,75 @@
+@use "./layout/variables" as *;
+
+.programs {
+  padding: 50px 0;
+  @media (min-width: $laptop) {
+    padding: 100px 0;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+  &__title {
+    max-width: 590px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__slider-holder {
+    position: relative;
+    width: 100vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 30px;
+    @media (min-width: $laptop) {
+      padding: 0 60px;
+    }
+  }
+}
+
+.programs-slider {
+  height: 100%;
+  .swiper-wrapper {
+    height: 100%;
+  }
+  &__slide {
+    height: auto;
+  }
+}
+
+.programs-slide {
+  &__image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 349/240;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  &__text {
+    color: $gray;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.author {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}

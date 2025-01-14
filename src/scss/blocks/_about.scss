@@ -1,0 +1,152 @@
+@use "./layout/variables" as *;
+
+.about {
+  padding: 50px 0;
+  @media (min-width: $laptop) {
+    padding: 100px 0;
+  }
+  &__top-holder {
+    max-width: 607px;
+    width: 100%;
+    margin: 0 auto 30px;
+    padding: 0 30px;
+    position: relative;
+    @media (min-width: $laptop) {
+      padding: 0 80px;
+    }
+    &:before,
+    &:after {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      content: '\e902';
+      color: #C2D8FE;
+      font-size: 35px;
+      position: absolute;
+      top: 0;
+      display: block;
+      @media (min-width: $laptop) {
+        font-size: 70px;
+      }
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+      transform: scaleX(-1);
+    }
+  }
+  &__title {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__statistic-list {
+    margin-bottom: 50px;
+  }
+}
+
+.statistic-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 870px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  &__item {
+    width: 33.33%;
+    padding: 0 15px;
+    border-right: 1px solid $dark-blue;
+    margin-bottom: 15px;
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.statistic-item {
+  color: $dark-blue;
+  line-height: 1.2;
+  font-weight: 400;
+  &__title {
+    font-weight: 800;
+    line-height: inherit;
+    margin-bottom: 0;
+    font-size: 30px;
+    @media (min-width: $laptop) {
+      font-size: 36px;
+    }
+    @media (min-width: $pc) {
+      font-size: 48px;
+    }
+  }
+}
+
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+  @media (min-width: $tablet) {
+    flex-direction: row;
+  }
+  &__item {
+    @media (min-width: $tablet) {
+      width: calc(50% - 15px);
+    }
+  }
+}
+
+.features-item {
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 30px;
+  }
+  &__image {
+    background: #C2D8FE;
+    font-size: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    @media (min-width: $tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    color: $dark-blue;
+    font-size: 22px;
+    margin-bottom: 5px;
+    @media (min-width: $pc) {
+      font-size: 28px;
+    }
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

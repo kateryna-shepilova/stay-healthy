@@ -1,0 +1,75 @@
+@use "./layout/variables" as *;
+
+.cta {
+  background: $dark-blue;
+  color: $white;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 50px;
+  }
+  @media (min-width: $pc) {
+    display: flex;
+    gap: 152px;
+  }
+  &__col-left {
+    margin-bottom: 40px;
+    @media (min-width: $tablet) {
+      width: calc(65% - 30px);
+      margin-bottom: 0;
+    }
+    @media (min-width: $pc) {
+      width: calc(65% - 76px);
+    }
+  }
+  &__col-right {
+    @media (min-width: $tablet) {
+      width: calc(35% - 30px);
+    }
+    @media (min-width: $pc) {
+      width: calc(35% - 76px);
+    }
+  }
+  &__title {
+    line-height: 1.35;
+    @media (min-width: $laptop) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.join-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 15px;
+}
+
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: 10px;
+  &__image {
+    font-size: 0;
+    width: calc(50% - 5px);
+    border-radius: 8px;
+    overflow: hidden;
+    &:nth-child(odd) {
+      margin-top: 20px;
+      margin-bottom: -10px;
+    }
+    &:nth-last-child(2):nth-child(odd) {
+      margin-bottom: 0;
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+}

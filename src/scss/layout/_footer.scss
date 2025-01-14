@@ -1,0 +1,130 @@
+@use "./layout/variables" as *;
+
+.footer {
+  &__top {
+    padding: 24px 0;
+    @media (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 48px 0;
+    }
+  }
+  &__col {
+    @media (min-width: $tablet) {
+      width: calc(50% - 12px);
+    }
+    @media (min-width: $laptop) {
+      width: calc(22.22% - 18px);
+    }
+    &_wide {
+      @media (min-width: $tablet) {
+        width: 100%;
+      }
+      @media (min-width: $laptop) {
+        width: calc(33.33% - 18px);
+      }
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__logo {
+    max-width: 156px;
+    font-size: 0;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__bottom {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+.social-media {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
+    &:before {
+      font-size: 20px;
+    }
+    &.icon-youtube {
+      color: $red;
+    }
+    &.icon-facebook {
+      color: #3180C8;
+    }
+    &.icon-instagram {
+      color: $pink;
+    }
+  }
+}
+
+.footer-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: $gray;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.contact-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: $gray;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.copyright {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
